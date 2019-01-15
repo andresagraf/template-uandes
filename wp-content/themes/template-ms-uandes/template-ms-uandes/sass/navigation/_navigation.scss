@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+@import "links";
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+@import "menus";
+@import "search";
+@import "submenu";
+@import "megamenu";
+
+.navigation.pagination {
+	display: inline-block;
+	margin: 2rem auto;
+	a, span {
+		display: inline-block;
+		padding: .4rem .8rem .3rem .8rem;
+		box-sizing: border-box;
+		color: $palette__darkblue;
+		border: 1px solid $palette__darkblue;
+		border-radius: 2rem;
+		margin: .2rem;
+	}
+	span.current {
+		background: $palette__darkblue;
+		color: white;
+	}
+	.prev, .next {
+		padding: .2rem .8rem .5rem .8rem;
+		transform: translateY(-.2rem);
+	}
+}
+
+

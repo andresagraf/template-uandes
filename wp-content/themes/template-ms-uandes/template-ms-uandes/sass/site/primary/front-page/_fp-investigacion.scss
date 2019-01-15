@@ -1,0 +1,57 @@
+/**
+ * Investigación
+ */
+
+.investigacion {
+	padding-top: 0;
+	padding-bottom: 0;
+	.container {
+		display: flex;
+		flex-direction: column;
+		@media (min-width: 50rem){
+			flex-direction: row;
+		}
+	}
+}
+
+.fp-investigacion-content {
+	flex: 1;
+}
+
+.fp-investigacion-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.fp-investigacion-slider-container {
+//	background: rgba(yellow,.1);
+	width: 100%;
+	max-width: 30rem;
+	margin: -2rem auto 2rem;
+	text-align: center;
+	flex-grow: 1;
+	display: flex;
+}
+
+.fp-investigacion-slide {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+//	background: red;
+	margin: auto;
+}
+
+.fp-investigacion-subtitle {
+	font-weight: 200;
+	font-size: 1.8rem;
+	margin: 0;
+	strong {
+		font-weight: 800;
+	}
+}
+
+
+.fp-investigacion-photo {
+	flex: 1;
+	background: $palette__lightblue;
+}

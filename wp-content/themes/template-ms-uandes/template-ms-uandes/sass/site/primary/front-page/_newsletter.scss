@@ -1,0 +1,35 @@
+/**
+ * Newsletter
+ */
+
+.newsletter {
+	background: #37424a;
+	border-top: 1px solid $palette__gray;
+	color: white;
+	.container {
+		display: flex;
+		padding: 1rem 0;
+		align-items: stretch;
+		flex-direction: column;
+		max-width: 30rem;
+		text-align: center;
+	}
+	.form-line {
+		width: 100%;
+		display: flex;
+		input {
+			flex: 1;
+		}
+	}
+}
+
+.newsletter-text, .newsletter-email, .newsletter-submit {
+	flex-grow: 1;
+}
+
+.newsletter-text {
+	font-size: 1rem;
+	@media (min-width: 50rem){
+		font-size: 1.5rem; // 24px
+	}
+}

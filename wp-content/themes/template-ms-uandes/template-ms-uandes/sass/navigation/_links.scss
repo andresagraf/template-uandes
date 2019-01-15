@@ -1,0 +1,25 @@
+a {
+	color: $palette__fuchsia;
+	text-decoration: none;
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+a.button-cta {
+	display: inline-block;
+	width: 100%;
+	max-width: 18rem;
+	text-decoration: none;
+	color: white;
+	background: $palette__lightblue;
+	text-align: center;
+	padding: .5rem;
+	border-bottom: 6px solid $palette__lighterblue;
+	&.color-fuchsia {
+		background: $palette__fuchsia;
+		border-bottom: 6px solid darken($palette__fuchsia,5);
+	}
+	@include scale-up;
+}

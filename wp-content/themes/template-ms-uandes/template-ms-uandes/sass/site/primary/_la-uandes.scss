@@ -1,0 +1,127 @@
+/**
+ * La UANDES
+ */
+
+.hero-la-uandes {
+	padding-top: 0;
+	width: 100%;
+	height: 0;
+	padding-bottom: 42%;
+	position: relative;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+	}
+}
+
+ul.links-line {
+	margin: 3rem 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	li {
+		display: inline-block;
+		padding: 2rem;
+		position: relative;
+		@media (min-width: 60rem){
+			&:after {
+				content: '|';
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&:last-child {
+				&:after {
+					content: none;
+				}
+			}			
+		}
+		a {
+			font-size: 1.875rem;
+			font-weight: bold;
+			color: $color__text-main;
+			text-decoration: none;
+			&:hover {
+				color: $palette__fuchsia;
+			}
+		}
+	}
+}
+
+.live-uandes {
+	background: $palette__fuchsia;
+	color: white;
+	padding: 0;
+}
+
+.live-uandes-grid {
+	display: grid;
+	grid: 100% / auto;
+	grid-template-areas: 
+		"calendar"
+		"international"
+		"college"
+		"student"
+		"social";
+	@media (min-width: 50rem){
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 15rem 15rem 15rem;
+		grid-template-areas:
+			"calendar college student"
+			"international college student"
+			"international college social";
+	}
+	a {
+		background-color: $palette__fuchsia;
+		background-size: cover;
+		padding: 2rem;
+		position: relative;
+		display: flex;
+		align-items: center;
+		color: white;
+		font-size: 1.875rem;
+		font-weight: bold;
+		span {
+			margin: auto;
+			text-shadow: 2px 2px 0 rgba(black,.5);
+		}
+		@media (min-width: 40rem){
+			flex-direction: column;
+			justify-content: flex-end;
+			span {
+				margin: 0;
+			}
+		}
+	}
+}
+
+.link-calendar {
+	background-image: url(img/bg/bg-calendar.jpg);
+	grid-area: calendar;
+}
+
+.link-international-club {
+	background-image: url(img/bg/bg-international.jpg);
+	grid-area: international;
+}
+
+.link-college-life {
+	background-image: url(img/bg/bg-college.jpg);
+	grid-area: college;
+}
+
+.link-student-services {
+	background-image: url(img/bg/bg-student.jpg);
+	grid-area: student;
+}
+
+.link-social-responsibility {
+	background-image: url(img/bg/bg-social.jpg);
+	grid-area: social;
+}

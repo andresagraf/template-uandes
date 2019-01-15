@@ -1,0 +1,91 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	margin-bottom: 2rem;
+}
+
+h1 {
+	font-size: 1.7rem;
+	@media (min-width: 50rem){
+		font-size: 2.5rem;
+	}
+}
+
+h2 {
+	font-size: 1.5rem;
+	@media (min-width: 50rem){
+		font-size: 2.25rem; // 36px		
+	}
+}
+
+h2.featured-header {
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	@media (min-width: 50rem){
+		font-size: 3rem;
+	}
+}
+
+h3 {
+	font-size: 1.2rem;
+	@media (min-width: 50rem){
+		font-size: 1.6rem;
+		line-height: 1.2;
+	}
+}
+
+h3.featured-header {
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	@media (min-width: 50rem){
+		font-size: 1.875rem; // 30px
+	}
+}
+
+p.featured-intro {
+	margin-top: 1rem;
+	font-size: 1.3rem;
+	line-height: 1;
+	@media (min-width: 50rem){
+		font-size: 2rem;
+	}
+}
+
+.light-subtitle {
+	color: $palette__lightblue;
+	font-size: 1.5rem;
+	margin-top: 5rem;
+}
+
+h2.chevron-title {
+	font-size: 1.5rem;
+	//margin-left: 2rem;
+	margin-bottom: 2rem;
+	margin-top: 0;
+	background-image: url(img/icons/icon-chevron-right.svg);
+	background-repeat: no-repeat;
+	background-position: left .5rem center;
+	padding-left: 2rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	@media (min-width: 30rem){
+		//margin-left: 4rem;
+		font-size: 1.75rem;
+		//padding-left: 5rem;
+		background-position: left center;
+		&.indented {
+			margin-left: 0rem;
+			padding-left: 5rem;
+			background-position: left 3rem center;
+		}
+	}
+	&.inverted-bg {
+		background-color: $palette__fuchsia;
+		background-image: url(img/icons/icon-chevron-right-white.svg);
+		color: white;
+		margin-bottom: 0;
+		padding-left: 3rem;
+		background-position: left 1rem center;
+	}
+}

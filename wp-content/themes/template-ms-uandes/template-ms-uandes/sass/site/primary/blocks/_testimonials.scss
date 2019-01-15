@@ -1,0 +1,46 @@
+/**
+ * Testimonials Block
+ */
+
+.facultad-testimonials {
+	background: #f6f6f6;
+	padding-bottom: 4rem;
+}
+
+.testimonio {
+	background: white;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 25rem;
+	text-align: center;
+	border: 1px solid rgb(200,200,200);
+	padding-top: 1rem;
+	&:after {
+		display: block;
+		content: '';
+		width: 100%;
+		height: 4px;
+		background: $palette__fuchsia;
+	}
+}
+
+.testimonio-imagen {
+	border-radius: 10rem;
+	overflow: hidden;
+	margin-bottom: 1rem;
+	width: 7rem;
+}
+
+.testimonio-autor {
+	color: #37424a;
+}
+
+.testimonio-quote {
+	font-size: 1.25rem;
+	line-height: 1;
+	padding: 1rem;
+	font-weight: bold;
+	flex-grow: 1;
+}

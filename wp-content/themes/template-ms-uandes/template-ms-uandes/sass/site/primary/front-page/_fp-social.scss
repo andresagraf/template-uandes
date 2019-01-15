@@ -1,0 +1,104 @@
+/**
+ * Social ("Conectémonos")
+ */
+
+.fp-conectemonos {
+	background: #37424a;
+	color: white;
+	h2.featured-header {
+		font-weight: normal;
+	}
+}
+
+.fp-social-container {
+	display: flex;
+	flex-direction: column;
+	@media (min-width: 30rem){
+		flex-direction: row;
+		max-width: 70rem;
+		margin: 1rem auto;
+		flex-wrap: wrap;
+	}
+}
+
+.fp-social-unit {
+	width: 100%;
+	padding: 1rem;
+	margin-bottom: 3rem;
+	color: $color__text-main;
+	@media (min-width: 50rem){
+	width: 33.33333333%;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}		
+	}
+}
+
+.fp-social-unit-inner {
+	position: relative;
+	width: 100%;
+	//height: 0;
+	//padding-bottom: 100%;
+	//overflow: hidden;
+	//background: rgba(0,0,0,0.5);
+}
+
+.fp-social-title {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 3.75rem;
+	background: white;
+	display: flex;
+	align-items: center;
+}
+
+.fp-social-icon {
+	display: block;
+	width: 2.25rem;
+	height: 2.25rem;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	margin-left: 1rem;
+	span {
+		display: none;
+	}
+}
+
+.fp-social-name {
+	color: black;
+	font-weight: bold;
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 1.75rem;
+}
+
+.fp-social-instagram .fp-social-icon {
+	background-image: url(img/icons/icon-social-instagram.svg);
+}
+
+.fp-social-youtube .fp-social-icon {
+	background-image: url(img/icons/icon-social-youtube.svg);
+}
+
+.fp-social-twitter .fp-social-icon {
+	background-image: url(img/icons/icon-social-twitter.svg);
+}
+
+.fp-more-about-us {
+	h2.featured-header {
+		text-align: center;
+		font-size: 2.25rem;
+		font-weight: normal;
+	}
+}
+

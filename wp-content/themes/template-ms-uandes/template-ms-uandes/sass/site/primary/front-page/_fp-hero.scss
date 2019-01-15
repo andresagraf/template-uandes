@@ -1,0 +1,18 @@
+/**
+ * Front page Hero
+ */
+
+.main-hero {
+	.ua-wide-thumbnail {
+		padding-bottom: 140%;
+		@media (min-width: 20rem){
+			padding-bottom: 80%;
+		}
+		@media (min-width: 30rem){
+			padding-bottom: 60%;
+		}
+		@media (min-width: 50rem){
+			padding-bottom: 40%;
+		}
+	}
+}

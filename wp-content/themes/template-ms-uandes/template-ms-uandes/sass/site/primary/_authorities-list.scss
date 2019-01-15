@@ -1,0 +1,95 @@
+/**
+ * Authorities List
+ */
+
+.carrera-autoridades {
+	padding-bottom: 6rem;
+	border-bottom-style: solid;
+	border-bottom-width: .5rem; // 8px
+	border-bottom-color: $palette__fuchsia;
+}
+
+.carrera-autoridades-container {
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.carrera-autoridad {
+	width: 100%;
+	margin: 1rem;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	color: #37424a;
+	font-size: 0.9375rem;
+	font-weight: normal;
+	background: #f6f6f6;
+	@media (min-width: 40rem){
+		width: 43%;
+	}
+	@media (min-width: 60rem){
+		width: 20%;
+	}
+}
+
+.autoridad-imagen {
+	width: 100%;
+	.autoridad-imagen-inner {
+		width: 100%;		
+		height: 0;
+		position: relative;
+		padding-bottom: 100%;
+		overflow: hidden;
+	}
+	img {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.autoridad-texto {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.autoridad-credenciales {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	color: lighten($color__text-main,30);
+	font-size: .8rem;
+	flex-grow: 1;
+	display: none;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	@media (min-width: 30rem){
+		display: block;
+	}
+}
+
+h3.autoridad-nombre {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 1.1rem;
+	font-weight: bold;
+	@media (min-width: 50rem){
+		margin-top: 1rem;
+	}
+}
+
+.autoridad-cargo {
+	font-weight: normal;
+	margin-bottom: 1rem;
+}

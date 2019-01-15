@@ -1,0 +1,136 @@
+/**
+ * News
+ */
+
+.fp-featured-article {
+	background: white;
+	@media (min-width: 40rem){
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+	}
+}
+
+.featured-article-image {
+	position: relative;
+	min-height: 15rem;
+	img {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.featured-article-text {
+	padding: 2rem 1rem;
+	@media (min-width: 50rem){
+		padding: 2rem 4rem;		
+	}
+}
+
+.featured-article-taxonomy {
+	font-weight: bold;
+	color: $palette__fuchsia;
+	font-size: .8rem;
+	@media (min-width: 50rem){
+		font-size: 1rem;
+	}
+}
+
+.featured-article-title {
+	font-size: 1.2rem;
+	line-height: 1;
+	color: $palette__fuchsia;
+	font-weight: bold;
+	@media (min-width: 50rem){
+		font-size: 1.875rem;	
+	}
+}
+
+.featured-article-read-more {
+	font-weight: bold;
+	text-align: right;
+	float: right;
+}
+
+.fp-prensa-container {
+	//background: rgba($palette__fuchsia,0.1);
+	display: flex;
+	flex-direction: column;
+	min-height: 100px;
+	@media (min-width: 30rem){
+		flex-direction: row;
+		align-items: stretch;
+		max-width: 70rem;
+		margin: 1rem auto 2rem;
+	}
+	a, a:visited {
+		color: $color__text-main;
+		text-decoration: none;
+	}
+}
+
+.fp-prensa-main-news-item {
+	flex: 1;
+	background: white;
+	//min-height: 100px;
+	display: flex;
+	flex-direction: column;
+	@include scale-up;
+}
+
+.fp-prensa-secondary-news-items {
+	box-sizing: border-box;
+	flex: 1;
+	//background: rgba($palette__darkblue,0.1);
+	//min-height: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	@media (min-width: 30rem){
+		padding-left: 1rem;
+	}
+	a .fp-prensa-title {
+		font-size: 1rem;
+	}
+}
+
+.fp-prensa-secondary-item {
+	width: 100%;
+	@media (min-width: 30rem){
+		&:nth-child(3), &:nth-child(4){
+			display: none;
+		}
+	}
+	@media (min-width: 50rem){
+		width: 50%;
+		padding-bottom: 1rem;
+		&:nth-child(3), &:nth-child(4){
+			display: block;
+		}
+	}
+	.inner {
+		padding-top: 0;
+	}
+	@include scale-up;
+}
+
+a .fp-prensa-title {
+	margin-bottom: 0;
+}
+
+.fp-prensa-category {
+	@include emphasis;
+}
+
+.fp-prensa-description {
+	margin: 0;
+}
+
+.fp-prensa-date {
+	font-size: .8rem;
+	font-weight: bold;
+}

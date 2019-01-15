@@ -1,0 +1,261 @@
+html {
+	position: relative;
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+*::selection {
+	background: $palette__fuchsia;
+	color: white;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	position: relative;
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+@import "tables";
+
+.mockup {
+	display: block;
+	margin: 0 auto;
+}
+
+section {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.alt-background {
+	background: $palette__lightgray;
+}
+
+.container {
+	width: 100%;
+	max-width: $max-container-width;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.container-delgado {
+	width: 100%;
+	max-width: 60rem;
+	margin: 0 auto;
+}
+
+.container-mas-delgado {
+	width: 100%;
+	max-width: 40rem;
+	margin: 0 auto;
+}
+
+
+a.btn-cta-simple {
+	display: inline-block;
+	background: $palette__lightblue;
+	color: white;
+	border: none;
+	font-size: 1.125rem;
+	margin-top: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2rem;
+	border-bottom: 6px solid $palette__lighterblue;
+	padding: .6rem 4rem;
+	border-radius: 0;
+	&:hover {
+		background: lighten($palette__lightblue,10);
+		border-bottom-color: $palette__lighterblue;
+		transform: scale(1.05);
+	}
+}
+
+.inner {
+	padding: 1rem;
+	box-sizing: border-box;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.ua-wide-thumbnail {
+	//background: $palette__darkblue;
+	width: 100%;
+	height: 0;
+	padding-bottom: 40%;
+	position: relative;
+	img, video, iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		//object-position: center center;
+	}
+	video {
+		z-index: -1;
+	}
+}
+
+.ua-16x9-thumbnail {
+	//background: lighten($palette__fuchsia,10);
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+	position: relative;
+	img, iframe, video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	img.contain {
+		object-fit: contain;
+	}
+}
+
+.ua-ultrawide-thumbnail {
+	//background: lighten($palette__fuchsia,10);
+	width: 100%;
+	height: 0;
+	padding-bottom: 25%;
+	position: relative;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.ua-3x4-thumbnail {
+	//background: lighten($palette__fuchsia,10);
+	width: 100%;
+	height: 0;
+	padding-bottom: 75%;
+	position: relative;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.ua-square-thumbnail {
+	//background: rgba(aquamarine, .5);
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+	position: relative;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.ua-breadcrumb {
+	font-size: .8rem;
+	list-style: none;
+	margin: 0;
+	padding: 2rem 0 1rem 1rem;
+	li {
+		display: inline;
+		a {
+			color: #90989b;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 0 .5rem;
+			&:after {
+				content: '|';
+				padding-left: 1rem;
+			}
+		}
+		&:last-child {
+			a {
+				&:after {
+					content: '';
+				}				
+			}
+		}
+	}
+}
+
+.bc-current-page {
+	font-weight: bold;
+}
+
+.bloque-generico {
+	border: 1px solid #e5e5e5;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	h3 {
+		background: #fafafa;
+		color: $palette__fuchsia;
+		margin: 0;
+		padding: .5rem 1rem;
+	}
+	div {
+		margin: 1rem;
+		@media (min-width: 40rem){
+			column-count: 2;
+			column-gap: 2rem;
+		}
+	}
+}
+
+.lista-chevrons {
+	list-style: none;
+	margin: 0;
+	li {
+		position: relative;
+		margin-bottom: .5rem;
+		&:before {
+			display: block;
+			width: .8rem;
+			height: 1.5rem;
+			content: '';
+			background-image: url(img/icons/icon-chevron-right.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			left: -1.5rem;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+// @import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/**
+ * Front page
+ */
+
+@import "primary/front-page/fp-hero";
+@import "primary/front-page/fp-cifras";
+@import "primary/front-page/fp-quotes";
+@import "primary/front-page/fp-investigacion";
+@import "primary/front-page/fp-vida-universitaria";
+@import "primary/front-page/fp-prensa";
+@import "primary/front-page/fp-agenda";
+@import "primary/front-page/fp-social";
+@import "primary/front-page/newsletter";
+
+
+
+@import "primary/noticias";
+@import "primary/events";
+@import "primary/facultades";
+@import "primary/persons";
+@import "primary/carreras";
+@import "primary/la-uandes";
+@import "primary/publicaciones";
+
+@import "secondary/search";
+@import "secondary/footer";

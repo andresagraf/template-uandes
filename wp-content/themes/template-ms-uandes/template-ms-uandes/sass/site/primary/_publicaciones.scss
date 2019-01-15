@@ -1,0 +1,70 @@
+/**
+ * Publicaciones
+ */
+
+.publicaciones-lista-anios {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		display: inline-block;
+		a {
+			display: block;
+			font-weight: bold;
+			font-size: 1.5rem;
+			color: lighten($palette__lightblue,40);
+			padding: .1rem .5rem;
+			&:hover {
+				color: lighten($palette__lightblue,20);
+			}
+		}
+		&.active a{
+				color: $palette__darkblue;
+			}
+	}
+}
+
+
+.lista-publicaciones {
+	display: none;
+	margin-top: 1rem;
+	margin-bottom: 4rem;
+	border-collapse: collapse;
+	table-layout: fixed;
+	width: 100%;
+	&.active {
+		display: table;
+	}
+	td, th {
+		padding: 1rem;
+		font-size: .8rem;
+	}
+	th {
+		border-top: 2px solid darken($palette__lightgray,10);
+		background: darken($palette__lightgray,10);
+	}
+	tr {
+		border: 1px solid darken($palette__lightgray,10);
+		&:nth-child(even){
+			td {
+				background: $palette__lightgray;				
+			}
+		}	
+	}
+	.hidden-label {
+		display: none;
+		font-weight: bold;
+	}
+	@media (max-width: 40rem){
+		th {
+			display: none;
+		}
+		td {
+			display: block;
+		}
+		.hidden-label {
+			display: inline;
+		}
+	}
+}

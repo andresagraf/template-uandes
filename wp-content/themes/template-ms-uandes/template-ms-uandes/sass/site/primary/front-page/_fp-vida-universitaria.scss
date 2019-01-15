@@ -1,0 +1,71 @@
+/**
+ * Vida Universitaria
+ */
+
+.fp-vida-universitaria {
+	padding-bottom: 0;
+	background: $palette__fuchsia;
+	color: white;
+}
+
+.fp-vida-universitaria-container {
+	width: 100%;
+	display: grid;
+	@media (min-width: 60rem){
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+}
+
+.fp-vida-universitaria-unit {
+	position: relative;
+	height: 0;
+	padding-bottom: 100%;
+	&:first-child {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		padding-bottom: 50%; 
+	}
+}
+
+.fp-vida-universitaria-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+	}
+}
+
+.fp-vida-universitaria-unit-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: .4s all;
+	padding: 2rem;
+	background: $palette__fuchsia;
+	text-align: left;
+	@media (min-width: 50rem){
+		&:hover {
+			opacity: 1;
+			transition: .4s all;
+		}		
+	}
+}
+
+.fp-vida-universitaria-title {
+	font-size: 1.875rem;
+	line-height: 1;
+	margin-top: 0;
+}

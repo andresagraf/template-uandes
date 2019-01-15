@@ -1,0 +1,1 @@
+add_action('admin_menu', 'create_theme_options_page');function create_theme_options_page() {  add_options_page('Theme Options', 'Theme Options', 'administrator', __FILE__, 'build_options_page');}

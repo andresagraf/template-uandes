@@ -304,7 +304,7 @@ register_taxonomy( 'Tipo', array( 'reportajes' ), array(
 ));
 }*/
 
-add_action( 'init', 'my_slider_home_init' );
+/*add_action( 'init', 'my_slider_home_init' );
 
 function my_slider_home_init() {
 	$labels = array(
@@ -321,7 +321,6 @@ function my_slider_home_init() {
         'parent_item_colon' => ''
     );
  
-    // Creamos un array para $args
     $args = array( 'labels' => $labels,
         'public' => true,
         'publicly_queryable' => true,
@@ -336,6 +335,6 @@ function my_slider_home_init() {
     );
 	
  
-    register_post_type( 'sliderhome', $args ); /* Registramos y a funcionar */
-};
+    register_post_type( 'sliderhome', $args );
+};*/
 

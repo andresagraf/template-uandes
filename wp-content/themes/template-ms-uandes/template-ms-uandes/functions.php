@@ -240,7 +240,7 @@ function the_breadcrumb() {
 add_action( 'init', 'my_custom_init' );
 /* Here's how to create your customized labels */
 
-add_action( 'init', 'my_reportajes_init' );
+/*add_action( 'init', 'my_reportajes_init' );
 
 function my_reportajes_init() {
 	$labels = array(
@@ -256,6 +256,70 @@ function my_reportajes_init() {
         'not_found_in_trash' => __( 'No se han encontrado Reportajes en la papelera' ),
         'parent_item_colon' => ''
     );
+ */
+    // Creamos un array para $args
+ /*   $args = array( 'labels' => $labels,
+		'labels'            => $tax_labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => null,
+        /*'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )*/
+      /*  'supports' => array( 'title', 'editor', 'author', 'thumbnail'),				  
+		'show_in_rest'=>true,		  
+    );*/
+ 
+ /*   register_post_type( 'reportajes', $args ); /* Registramos y a funcionar */
+//};
+
+//add_action( 'init', 'create_book_taxonomies', 0 );	 
+ 
+// Creamos dos taxonomías, género y autor para el custom post type "libro"
+//function create_book_taxonomies() {
+	// Añadimos nueva taxonomía y la hacemos jerárquica (como las categorías por defecto)
+/*	$labels = array(
+	'name' => _x( 'Tipo reportaje', 'taxonomy general name' ),
+	'singular_name' => _x( 'tipo', 'taxonomy singular name' ),
+	'search_items' =>  __( 'Buscar por tipos' ),
+	'all_items' => __( 'Todos los Tipos' ),
+	'parent_item' => __( 'tipo padre' ),
+	'parent_item_colon' => __( 'Género tipo:' ),
+	'edit_item' => __( 'Editar Tipo' ),
+	'update_item' => __( 'Actualizar Tipo' ),
+	'add_new_item' => __( 'Añadir nuevo Tipo' ),
+	'new_item_name' => __( 'Nombre del nuevo tipo' ),
+	'show_in_rest'=>true,	
+); 
+register_taxonomy( 'Tipo', array( 'reportajes' ), array(
+	'hierarchical' => true,
+	'labels' => $labels, /* ADVERTENCIA: Aquí es donde se utiliza la variable $labels */
+/*	'show_ui' => true,
+	'query_var' => true,
+	'rewrite' => array( 'slug' => 'Tipo de Reportaje' ),
+	'show_in_rest'=>true,	
+));
+}*/
+
+add_action( 'init', 'my_slider_home_init' );
+
+function my_slider_home_init() {
+	$labels = array(
+	'name' => _x( 'Slider Home', 'post type general name' ),
+        'singular_name' => _x( 'Slider Home', 'post type singular name' ),
+        'add_new' => _x( 'Añadir nuevo', 'Slider Home' ),
+        'add_new_item' => __( 'Añadir nuevo Slider' ),
+        'edit_item' => __( 'Editar Slider' ),
+        'new_item' => __( 'Nuevo Slider' ),
+        'view_item' => __( 'Ver Slider' ),
+        'search_items' => __( 'Buscar Slider' ),
+        'not_found' =>  __( 'No se han encontrado Slider' ),
+        'not_found_in_trash' => __( 'No se han encontrado Slider en la papelera' ),
+        'parent_item_colon' => ''
+    );
  
     // Creamos un array para $args
     $args = array( 'labels' => $labels,
@@ -267,10 +331,11 @@ function my_reportajes_init() {
         'capability_type' => 'post',
         'hierarchical' => false,
         'menu_position' => null,
-        /*'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )*/
-		'show_in_rest'=>true,		  
+        'supports' => array( 'title' ),
+		'show_in_rest'=>false,		  
     );
+	
  
-    register_post_type( 'reportajes', $args ); /* Registramos y a funcionar */
+    register_post_type( 'sliderhome', $args ); /* Registramos y a funcionar */
 };
 

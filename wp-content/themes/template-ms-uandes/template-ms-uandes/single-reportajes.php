@@ -30,7 +30,7 @@ get_header();
 			<hr>
 			<div class="centered">
 				<ul class="news-tags">
-					<?php $tags = wp_get_post_tags($post->ID);?>
+					<?php   = wp_get_post_tags($post->ID);?>
 					<?php foreach($tags as $tag) : ?>
 						<li><a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a></li>
 					<?php endforeach; ?>

@@ -42,15 +42,15 @@ get_header();
 	</div>
 </section>
 
-<section class="features alt-background">
+<!--<section class="features alt-background">
 	<div class="container centered">
-		<h2><?php _e('Reportajes','uandes'); ?></h2>
+		<h2><?php// _e('Reportajes','uandes'); ?></h2>
 		<div class="features-container">
-			<?php
+			<?php /*
 				
 				$features_args = array(
 					'posts_per_page' => 3,
-					'tag' => 'reportaje',
+					'post_type' => 'reportajes',
 					'orderby' => 'post__in'
 				);
 				
@@ -65,12 +65,12 @@ get_header();
 			
 			<?php endwhile;
 				
-				wp_reset_postdata();
+				wp_reset_postdata(); */
 			?>
 			
 		</div>
 	</div>
-</section>
+</section>-->
 </div>
 
 <?php

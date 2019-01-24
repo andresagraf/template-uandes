@@ -7,6 +7,7 @@ h1 {
 	font-size: 1.7rem;
 	@media (min-width: 50rem){
 		font-size: 2.5rem;
+		margin-top: 0;
 	}
 }
 
@@ -87,5 +88,13 @@ h2.chevron-title {
 		margin-bottom: 0;
 		padding-left: 3rem;
 		background-position: left 1rem center;
+	}
+}
+
+#sidebar, #sidebar2 {
+	 h2 {
+		font-size: 1.25rem;
+		 margin-bottom: 0px;
+		 margin-top: 0;
 	}
 }

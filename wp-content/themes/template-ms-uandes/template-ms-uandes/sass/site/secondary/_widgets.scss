@@ -1,8 +1,50 @@
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 0 0;
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
 	}
+}
+
+.sidebarclass {
+	margin-top:	36px;
+	display: none;
+	@media (min-width: 50rem){
+	display: block;
+	}	
+	
+}
+
+
+.sidebarclass .bellows.bellows-skin-blue-material {
+  background: #fff;
+  box-shadow: none;
+}
+
+.sidebarclass .bellows.bellows-skin-blue-material .bellows-nav .bellows-item-level-0 > .bellows-target .bellows-subtoggle {
+  background: rgba(0, 0, 0, 0.0);
+}
+
+.sidebarclass .bellows.bellows-skin-blue-material .bellows-nav .bellows-target, .sidebarclass .bellows.bellows-skin-blue-material .bellows-nav .bellows-custom-content {
+    color: #37424a;
+}
+
+.sidebarclass .bellows.bellows-skin-blue-material .bellows-nav .bellows-item-level-0 > .bellows-target, .sidebarclass .bellows.bellows-skin-blue-material .bellows-nav .bellows-item-level-0 > .bellows-custom-content {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.sidebarclass .bellows.bellows-skin-blue-material .bellows-nav .bellows-item-level-0 > .bellows-target:hover {
+    background: #fff;
+}
+
+.sidebarclass .bellows .bellows-nav .bellows-subtoggle .fa {
+    color: #e10538;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.sidebarclass  .bellows.bellows-skin-blue-material .bellows-nav .bellows-item-level-0.bellows-active > .bellows-target {
+    background: #fff;
+	font-weight: bold;
 }

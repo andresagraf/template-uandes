@@ -25,12 +25,12 @@ get_header();
 	$slider_home = get_field('slider_home');
 
 	if( $muestravideo ) {
-		echo '<video class="video_wallsource" preload="auto" autoplay loop><source src="';
+		echo '<video class="video_wallsource"  muted="" autoplay="" loop="" playsinline=""><source src="';
 		echo $source_video;
 		echo '" type="video/mp4"></video>';
 	} 
 	else if($slider_home) {
-		echo '<ul>';
+		echo '<ul class="slider">';
 			foreach($slider_home as $row)
 				{
 					$image = $row['imagen_desktop'];
@@ -44,21 +44,15 @@ get_header();
 					echo '">';
 					endif;
 					
-					echo '<img src="';
+					echo '<div class="slider_home_desktop" style="background-image:url(';
 					echo  $image;
-					echo '" alt="';
-					echo $titulo_slider;
-					echo '"';
-					echo 'class="slider-desktop"';
-					echo '/>';
+					echo ')"';
+					echo '></div>';
 					
-					echo '<img src="';
-					echo  $image_mobile;
-					echo '" alt="';
-					echo $titulo_slider;
-					echo '"';
-					echo 'class="slider-mobile"';
-					echo '/>';
+					echo '<div class="slider_home_mobile" style="background-image:url(';
+					echo  $image;
+					echo ')"';
+					echo '></div>';
 					
 					if( $link ):
 					echo '</a>';
@@ -84,7 +78,8 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 	</div>
-</section>	
+</section>
+<?php include("inc/acceso-directo.php"); ?>	
 <?php
 //get_sidebar();
 get_footer();

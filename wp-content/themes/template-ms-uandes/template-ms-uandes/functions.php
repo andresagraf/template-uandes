@@ -7,6 +7,15 @@
  * @package Template-ms-uandes
  */
 
+if( function_exists('acf_add_options_page') ) {
+	
+		acf_add_options_page([
+		'page_title' => 'Opciones Footer'
+	]);
+	
+}
+
+
 if ( ! function_exists( 'template_ms_uandes_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -105,14 +114,23 @@ add_action( 'after_setup_theme', 'template_ms_uandes_content_width', 0 );
  */
 function template_ms_uandes_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'template-ms-uandes' ),
+		'name'          => esc_html__( 'Sidebar Izquierdo', 'sidebar-izquierdo' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'template-ms-uandes' ),
+		'description'   => esc_html__( 'Add widgets here.', 'sidebar-izquierdo' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar Derecho', 'sidebar-derecho' ),
+		'id'            => 'sidebar-2',
+		'description'   => esc_html__( 'Add widgets here.', 'sidebar-derecho' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );	
 }
 add_action( 'widgets_init', 'template_ms_uandes_widgets_init' );
 
@@ -125,6 +143,12 @@ function template_ms_uandes_scripts() {
 	wp_enqueue_script( 'template-ms-uandes-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'template-ms-uandes-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	
+	wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/css/slick.css' );	
+	
+	wp_enqueue_style( 'slick-theme-css', get_stylesheet_directory_uri() . '/css/slick-theme.css' );
+	
+	wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/js/slick.min.js', array(), '20151216', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -235,6 +259,9 @@ function the_breadcrumb() {
         echo '</div>';
     }
 }
+
+
+
 /*
 // La función no será utilizada antes del 'init'.
 add_action( 'init', 'my_custom_init' );

@@ -11,9 +11,13 @@
  *
  * @package Template-ms-uandes
  */
+ /*
+ Template Name: Tres columnas
+*/
 
 get_header();
 ?>
+
 	<nav class="sticky-menu">
 		<div class="container">
 		<a class="submenu-heading" href="<?php echo esc_url(); ?>">
@@ -22,8 +26,11 @@ get_header();
 		</div>
 	</nav>
 <section class="page-main">
-	<div class="container">
 
+	<div class="container tres-column-grid">
+<div id="sidebar" role="complementary"  class="sidebarclass">
+  <?php if (!dynamic_sidebar('sidebar-izquierdo')); ?>
+</div>	
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -32,9 +39,13 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
+<div id="sidebar2" role="complementary" class="sidebarclass">
+  <?php if (!dynamic_sidebar('sidebar-derecho')); ?>
+</div>			
 	</div>
 </section>
 <?php include("inc/acceso-directo.php"); ?>
+	
 <?php
 //get_sidebar();
 get_footer();

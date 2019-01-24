@@ -2,6 +2,12 @@
  * Shortcuts Block
  */
 
+
+.shortcuts {
+	background-color: #fafafa;
+	
+}
+
 .shortcuts-container {
 	display: flex;
 	justify-content: space-around;
@@ -10,7 +16,7 @@
 .shortcuts-header {
 	font-size: 1.5rem;
 	font-weight: normal;
-	color: $palette__fuchsia;
+	/*color: $palette__fuchsia;*/
 	@media (min-width: 50rem){
 		font-size: 2.25rem;
 	}

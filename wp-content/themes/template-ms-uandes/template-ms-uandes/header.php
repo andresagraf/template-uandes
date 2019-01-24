@@ -36,7 +36,13 @@
 	<nav class="middle-menu">
 		<div class="container">
 			<a href="/" class="main-logo"><img src="<?php echo get_template_directory_uri(); ?>/img/elements/logo-uandes-3.svg" alt="Universidad de Los Andes"></a>
-			<?php wp_nav_menu( ['menu' => 'Principal'] ); ?>
+			
+			<?php 
+				$args = array(
+					'menu_class' => 'middle-menu-list',        
+					'menu' => 'Principal');
+				wp_nav_menu( $args ); 
+				?>
 			<!--<ul class="middle-menu-list">
 				<li><a href="/la-uandes/">La UANDES</a></li>
 				<li><a href="http://admision.uandes.cl/">Admisión</a></li>

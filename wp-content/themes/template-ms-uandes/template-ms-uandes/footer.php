@@ -1,3 +1,4 @@
+<?php include('inc/front-page/newsletter.php'); ?>
 <footer class="site-footer">
 	<div class="container">
 		<div class="footer-contact-title">
@@ -68,5 +69,13 @@
 	</div>
 </footer>
 <?php wp_footer(); ?>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+                $('.slider').slick({
+                    dots: true,
+                    adaptiveHeight: true,
+                })
+            });
+</script>
 </body>
 </html>

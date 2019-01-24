@@ -11,6 +11,9 @@
  *
  * @package Template-ms-uandes
  */
+ /*
+ Template Name: Dos columnas
+*/
 
 get_header();
 ?>
@@ -21,9 +24,13 @@ get_header();
 			<?php echo get_the_title(); ?></a>
 		</div>
 	</nav>
-<section class="page-main">
-	<div class="container">
 
+<section class="page-main">
+
+	<div class="container dual-column-grid">
+<div id="sidebar" role="complementary" class="sidebarclass">
+  <?php if (!dynamic_sidebar('sidebar-izquierdo')); ?>
+</div>	
 		<?php
 		while ( have_posts() ) :
 			the_post();

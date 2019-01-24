@@ -74,5 +74,5 @@ get_header();
 </div>
 
 <?php
-	include('inc/front-page/newsletter.php');
+	
 get_footer();

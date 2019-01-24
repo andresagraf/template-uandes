@@ -277,10 +277,28 @@
 
 
 .dual-column-grid {
+	display: block;
+	@media (min-width: 50rem){
+			display: grid;
+		grid-template-columns: 1fr 4fr;
+		grid-column-gap: 2rem;
+	}
+}
+
+.dual-column-grid .entry-content {
+		width: 100%;
+	@media (min-width: 50rem){
+		max-width: 60rem;
+		}
+	}
+
+
+
+.tres-column-grid {
 	display: grid;
 	@media (min-width: 50rem){
-		grid-template-columns: 1fr 1fr;
-		grid-column-gap: 10rem;
+		grid-template-columns: 1fr 3fr 1fr;
+		grid-column-gap: 2rem;
 	}
 }
 

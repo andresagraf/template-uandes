@@ -10,21 +10,11 @@
 <body <?php body_class(); ?>>
 	<nav class="popup-menu">
 		<a class="popup-menu-close" href="#">&#x2716</a>
-		<?php wp_nav_menu( ['menu' => 'Principal'] ); ?>
-		<!--<ul>
-			<li><a href="/la-uandes/">La UANDES</a></li>
-			<li><a href="http://admision.uandes.cl/">Admisión</a></li>
-			<li><a href="/carreras/">Carreras</a></li>
-			<li><a href="http://postgradosuandes.cl/">Postgrados</a></li>
-			<li><a href="#">Extensión</a></li>
-			<li><a href="/noticias/">Noticias</a></li>
-			<li><a href="/eventos/">Eventos</a></li>
-			<li class="menu-secondary-item"><a href="#">Investigación</a></li>
-			<li class="menu-secondary-item"><a href="#">Innovación</a></li>
-			<li class="menu-secondary-item"><a href="#">Internacional</a></li>
-			<li class="menu-secondary-item"><a href="#">Biblioteca</a></li>
-			<li class="menu-secondary-item"><a href="#">EN</a></li>
-		</ul>-->
+		
+	<ul id="MyMenu">
+	  <?php wp_nav_menu( array('menu' => 'Principal', 'items_wrap' => '%3$s', 'container' => false ) ); ?>
+	  <?php wp_nav_menu( array('menu' => 'Cenefa', 'items_wrap' => '%3$s', 'container' => false ) ); ?>
+	</ul>	
 	</nav>
 
 <header class="main-menu">
@@ -43,17 +33,7 @@
 					'menu' => 'Principal');
 				wp_nav_menu( $args ); 
 				?>
-			<!--<ul class="middle-menu-list">
-				<li><a href="/la-uandes/">La UANDES</a></li>
-				<li><a href="http://admision.uandes.cl/">Admisión</a></li>
-				<li class="megamenu-toggle"><a href="/carreras/">Carreras</a>
-				</li>
-				<li><a href="http://postgradosuandes.cl/">Postgrados y Educación Contínua</a></li>
-				<li><a href="#">Extensión</a></li>
-				<li><a href="/noticias/">Noticias</a></li>
-				<li><a href="/eventos/">Eventos</a></li>
-			</ul>-->
-		</div>
+				</div>
 	</nav>
 	<a href="#" class="main-menu-toggle"><span>Menú</span></a>	
 	
@@ -65,20 +45,11 @@
 			</form>
 			<div class="search-suggestions">
 				<h3>Lo más buscado</h3>
-				<ul>
-					<li><a href="http://admision.uandes.cl/">Admisión</a></li>
-					<li><a href="/carreras/">Carreras</a></li>
-					<li><a href="http://postgradosuandes.cl/">Postgrados</a></li>
-					<li><a href="http://postgradosuandes.cl/">Educación Contínua</a></li>
-					<li><a href="#">Extensión</a></li>
-					<li><a href="#">Vive UANDES</a></li>
-					<li><a href="#">Sala de Prensa</a></li>
-					<li><a href="#">La Universidad</a></li>
-					<li><a href="#">Biblioteca</a></li>
-					<li><a href="#">Investigación</a></li>
-					<li><a href="http://innovacion.uandes.cl/">Innovación</a></li>
-					<li><a href="#">Internacional</a></li>
-				</ul>
+				<?php 
+					$args = array(       
+						'menu' => 'Lo más buscado');
+					wp_nav_menu( $args ); 
+					?>
 			</div>
 		</div>
 	</div>

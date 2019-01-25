@@ -1,35 +1,20 @@
-<?php
-/**
- * Template part for displaying results in search pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package Template-ms-uandes
- */
-
-?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			template_ms_uandes_posted_on();
-			template_ms_uandes_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php template_ms_uandes_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php template_ms_uandes_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+<article class="item-busqueda">
+	<a href="<?php echo get_the_permalink(); ?>"><h1><?php echo get_the_title(); ?></h1></a>
+	<?php echo the_excerpt(); ?>
+	<span class="busqueda-post-type"><?php
+		switch( get_post_type( get_the_id() ) ){
+			case 'post' :
+				echo 'Noticias';
+				break;
+			case 'page' :
+				echo 'Página';
+				break;
+			case 'publicacion' :
+				echo 'Publicación';
+				break;
+			case 'prensa' :
+				echo 'Mención en la prensa';
+				break;
+		}
+		?>
+</article>

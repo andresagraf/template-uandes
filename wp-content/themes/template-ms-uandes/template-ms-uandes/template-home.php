@@ -50,7 +50,7 @@ get_header();
 					echo '></div>';
 					
 					echo '<div class="slider_home_mobile" style="background-image:url(';
-					echo  $image;
+					echo  $image_mobile;
 					echo ')"';
 					echo '></div>';
 					
@@ -72,11 +72,12 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post();
-
 			get_template_part( 'template-parts/content', 'page' );
-
 		endwhile; // End of the loop.
 		?>
+
+	<?php include("blocks/block-grilla-home.php"); ?>	
+
 	</div>
 </section>
 <?php include("inc/acceso-directo.php"); ?>	

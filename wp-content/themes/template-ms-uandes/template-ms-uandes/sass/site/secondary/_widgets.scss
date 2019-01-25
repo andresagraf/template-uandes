@@ -6,14 +6,23 @@
 		max-width: 100%;
 	}
 }
-
+#sidebar {
+	&.sidebarclass {
+    border-right: 1px solid #f2f2f2;		
+	padding-right: 12px;				
+	}
+}
 .sidebarclass {
-	margin-top:	36px;
+	padding-top: 36px;
 	display: none;
 	@media (min-width: 50rem){
 	display: block;
 	}	
 	
+}
+
+.sidebarclass .bellows .bellows-nav .bellows-menu-item-has-children>.bellows-target {
+    padding-right: 54px;
 }
 
 
@@ -47,4 +56,8 @@
 .sidebarclass  .bellows.bellows-skin-blue-material .bellows-nav .bellows-item-level-0.bellows-active > .bellows-target {
     background: #fff;
 	font-weight: bold;
+}
+
+.bellows .bellows-nav .bellows-subtoggle {
+    width: 44px;
 }

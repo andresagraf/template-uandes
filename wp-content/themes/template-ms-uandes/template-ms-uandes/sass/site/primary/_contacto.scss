@@ -1,0 +1,78 @@
+/**
+ * contacto
+ */
+
+.cont-contac {
+
+}
+
+.contacto-list {
+	padding-top: 2rem;
+	padding-bottom: 3rem;
+	text-align: left;
+	display: grid;
+	grid-auto-rows: 1fr;
+	grid-row-gap: 1rem;
+	grid-template-columns: auto;
+	a {
+		color:#37424a;
+	}
+	@media (min-width: 37.5rem){
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 1rem;
+	}
+	@media (min-width: 50rem){
+		grid-row-gap: 4rem;
+		grid-column-gap: 4rem;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.caja-contacto {
+		min-height: 4rem;
+		padding: .1rem;
+		/*display: flex;*/
+		text-align: center;
+		border: 1px solid #ddd;
+		justify-content: center;		
+		color: $color__text-main;
+		font-weight: bold;
+		background-color: #ffffff;
+		&.gris {
+			background-color: #fafafa;
+		}		
+		@media (min-width: 50rem){
+			padding: .2rem 2rem 1rem;
+		}
+		span {
+			margin: auto;
+		}
+		&:hover {
+			border-color: $palette__fuchsia;
+		}
+	}
+	h3	{
+		margin: 1rem;
+		border-bottom: 1px solid #e00034;
+		padding: 0 0 1rem 0;
+		
+	}
+	.icon-contact {
+		width: 45px;
+		margin: 1rem auto;
+		height: 45px;
+		color:  #cfcdcd;
+		&.circulo_contac {
+			color: #fff;
+			background-color: #cfcdcd;
+    		border-radius: 45px;
+			font-size: 2rem;
+		}
+		.fa-envelope {
+			font-size: 2.6rem;
+		}
+		.fa-map-marker {
+			font-size: 2.6rem;
+		}
+	}
+	
+	
+}

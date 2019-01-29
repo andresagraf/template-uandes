@@ -14,13 +14,7 @@
 
 get_header();
 ?>
-	<nav class="sticky-menu">
-		<div class="container">
-		<a class="submenu-heading" href="<?php echo esc_url(); ?>">
-			
-			<?php echo get_the_title(); ?></a>
-		</div>
-	</nav>
+<?php include("inc/main-secondary-menu.php"); ?>
 <section class="page-main">
 	<div class="container">
 

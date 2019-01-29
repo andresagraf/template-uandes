@@ -1,19 +1,33 @@
 <div class="home-grid">
+<?php
+	$bloqhomes = get_field('texto_home');
 
-		<div class="imagen">dasdasdasda</div>
-		<div class="txt-home">
-			<h2>Título 1</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare pretium dui, sed tristique mi laoreet et. Pellentesque eu ornare turpis. Etiam hendrerit vestibulum nibh ut ultricies. Proin sit amet purus sed lectus viverra facilisis ac et magna. Pellentesque scelerisque efficitur neque, eget vehicula sapien ornare a. Vivamus in tempor mi. Suspendisse at quam nulla.</p>
-			<div class="wp-block-button is-style-default"><a class="wp-block-button__link" href="#">link 1</a></div></div>
+if('' != $bloqhomes) : 
+		$c = 1;
+	foreach($bloqhomes as $bloqhome) : 
 
-		<div class="imagen">dasdasdasda</div>
-		<div class="txt-home">
-			<h2>Título 2</h2>
-			<ul><li><a href="http://asdasdasdasdasdasd">Link 1</a></li><li><a href="#">Link 2</a></li><li><a href="#">Link 3</a></li><li><a href="#">Link 4</a></li></ul>
-		</div>
-
+	if($c % 2){
+	
+	?>
+<div class="home-gridrow izquierda">
+ <div class="imagen-home order-1" style="background-image: url(<?php echo $bloqhome['imagen_home']; ?>)"></div>
+  <div class="txt-home order-1">
+	<div class="marg-inter">
+	<?php echo $bloqhome['texto_home2']; ?>
+	</div>
+	</div>
 </div>
-
-
-
-
+			<?php }else{
+		?>
+<div class="home-gridrow derecha">
+<div class="imagen-home order-2" style="background-image: url(<?php echo $bloqhome['imagen_home']; ?>)"></div>
+	<div class="txt-home order-2">
+	<div class="marg-inter">
+	<?php echo $bloqhome['texto_home2']; ?>
+	</div>
+</div>
+</div>	
+<?php  
+	} $c++; endforeach; ?>
+<?php endif; ?>	
+</div>

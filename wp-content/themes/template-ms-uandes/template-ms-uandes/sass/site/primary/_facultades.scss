@@ -287,9 +287,16 @@
 
 .dual-column-grid .entry-content {
 		width: 100%;
+		.wp-block-media-text {
+			display: block;
+		}	
 	@media (min-width: 50rem){
 		max-width: 60rem;
+		.wp-block-media-text {
+			display: grid;
+		}		
 		}
+	
 	}
 
 
